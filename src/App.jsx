@@ -9,9 +9,9 @@ function App() {
         setDarkMode(!darkMode);
     }
     return (
-        <>
+        <div className='calc(h-[100vh-60px])'>
             <Navbar darkMode={darkMode} setDarkMode={toggleButton} />
-        </>
+        </div>
     );
 }
 
