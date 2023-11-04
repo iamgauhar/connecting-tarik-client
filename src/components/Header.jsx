@@ -22,11 +22,10 @@ const Header = () => {
                 </div>
                 <div className={`flex md:items-center gap-6 relative`}>
                     <div
-                        className={`${
-                            toggle
+                        className={`${toggle
                                 ? 'w-[250px] md:w-full'
                                 : 'left-[-250px] md:left-0'
-                        } flex flex-col md:flex-row md:gap-6 pl-10 md:pl-0 md:items-center pt-[100px] md:pt-0 fixed left-0 top-0 h-[100vh] md:h-auto md:relative z-20 bg-blue-500 text-white transition-all`}
+                            } flex flex-col md:flex-row md:gap-6 pl-10 md:pl-0 md:items-center pt-[100px] md:pt-0 fixed left-0 top-0 h-[100vh] md:h-auto md:relative z-20 bg-blue-500 text-white transition-all`}
                     >
                         <div
                             className="absolute top-[24px] right-[25px] cursor-pointer md:hidden text-2xl"
