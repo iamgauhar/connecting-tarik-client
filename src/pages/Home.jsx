@@ -1,4 +1,4 @@
-import React from 'react';
+
 import HeroSection from '../components/HeroSection';
 import FeaturedCate from '../components/FeaturedCate';
 import RelatedVideos from '../components/RelatedVideos';
@@ -11,9 +11,10 @@ const Home = () => {
                 <HeroSection />
                 <FeaturedCate />
             </div>
-
-            <RelatedVideos />
-            <Products />
+            <div className='p-4 md:px-14'>
+                <RelatedVideos />
+                <Products />
+            </div>
         </div>
     );
 };
