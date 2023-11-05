@@ -1,26 +1,17 @@
 import React from "react";
+import smartphone from "../assets/images/user-interface.png"
 
 const ProductCard = () => {
   return (
-    <div className="w-[95%] md:w-[260px] p-4 border flex flex-col gap-2 cursor-pointer">
-      <div className="mb-5 text-center hover:-translate-y-1 hover:scale-110 hover:bg-gray-200 duration-300">
-        <img
-          src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-          className="w-full h-full object-cover"
-        />
+    <div className="w-full md:w-[420px] xl:w-[370px] max-h-[150px] bg-slate-50 cursor-pointer p-4 flex items-center gap-2 border hover:scale-105 transition-all duration-500">
+      <div className="w-[160px] h-full">
+        <img className="w-full h-full object-cover" src={smartphone} alt="" />
       </div>
-      <p className="text-[12px] text-gray-500 mb-3">Canon</p>
-      <div className="text-[15px] font-bold text-gray-900">
-        Canon CN-E14-35mm
+      <div className="h-full w-full  flex flex-col justify-evenly">
+        <h2 className="font-bold text-xl">Redmi note 11</h2>
+        <p className="text-gray-500">Smartphone</p>
+        <p className="font-semibold"><span>&#x20b9; </span>9999</p>
       </div>
-      <div className="flex gap-5 mb-5">
-        <p className="font-bold text-gray-800">$652</p>
-      </div>
-      <button className="border-none outline-none px-2 py-1 text-[14px] bg-gray-900 text-white text-center rounded-md hover:-translate-y-1 hover:scale-110 duration-300">
-        View Details
-      </button>
-
     </div>
   );
 };

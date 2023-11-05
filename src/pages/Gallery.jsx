@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Masonry from 'react-masonry-css';
 
 function Gallery() {

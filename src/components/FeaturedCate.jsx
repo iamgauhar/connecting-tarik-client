@@ -1,4 +1,4 @@
-import React from "react";
+
 import CateCard from "./CateCard";
 
 const FeaturedCate = () => {
