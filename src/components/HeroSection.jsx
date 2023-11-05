@@ -1,11 +1,11 @@
-import React from "react";
+
 import SlideCrousel from '../components/Crousel'
 import smartWatch from '../assets/images/MinimalistGW.png'
 
 const HeroSection = () => {
   return (
     <div>
-      <div className=' bg-orange-100 relative top-14 p-4 md:px-14'>
+      <div className=' bg-orange-50 relative'>
         <div className=' h-auto md:h-[64vh] grid gap-4 grid-cols-4 md:grid-cols-3 pt-4 pb-4'>
           <div className='col-span-4 row-span-2 md:col-span-2 rounded-md'> <SlideCrousel /> </div>
           <div className='col-span-2  md:col-span-1 rounded-md overflow-hidden object-center cursor-pointer'>
@@ -16,7 +16,6 @@ const HeroSection = () => {
 
           </div>
         </div>
-        <div className='bg-orange-400 col-span-full '>Bottom</div>
       </div>
     </div>
   );

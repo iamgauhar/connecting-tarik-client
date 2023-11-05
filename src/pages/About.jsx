@@ -1,4 +1,4 @@
-import React from 'react'
+
 import SlideCrousel from '../components/Crousel'
 import smartWatch from '../assets/images/MinimalistGW.png'
 
