@@ -28,6 +28,11 @@ const Footer = () => {
                                     Blog
                                 </a>
                             </li>
+                            <li className="inline-block relative pr-8 last:pr-0 last-of-type:before:hidden before:absolute before:top-1/2 before:right-3 before:-translate-y-1/2 before:content-['/'] before:text-gray-300 dark:before:text-gray-600">
+                                <a className="inline-flex gap-x-2 text-sm text-gray-500 hover:text-gray-800 dark:text-gray-500 dark:hover:text-gray-200" href="https://www.flaticon.com/" rel="noreferrer" target='_blank'>
+                                    Flaticon
+                                </a>
+                            </li>
                         </ul>
                         {/* <!-- End Col --> */}
 
