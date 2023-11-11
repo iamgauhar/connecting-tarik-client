@@ -1,5 +1,4 @@
 import React from "react";
-import smartphone from "../assets/images/user-interface.png"
 
 const ProductCard = ({ item }) => {
   const { name, images, price, categoryId } = item

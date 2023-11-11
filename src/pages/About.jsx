@@ -1,6 +1,6 @@
 
 import SlideCrousel from '../components/Crousel'
-import smartWatch from '../assets/images/MinimalistGW.png'
+import smartWatch from '../assets/images/Minimalist Description.png'
 
 const About = () => {
     return (

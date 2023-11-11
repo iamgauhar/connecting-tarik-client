@@ -9,6 +9,7 @@ const ItemContextProvider = ({ children }) => {
     const [products, setProducts] = useState([]);
     const [smartwatch, setSmartwatch] = useState([]);
     const [earbuds, setEarbuds] = useState([]);
+    const [images, setImages] = useState([]);
     return (
         <ItemContext.Provider value={{
             categories, setCategories,
@@ -17,6 +18,7 @@ const ItemContextProvider = ({ children }) => {
             products, setProducts,
             smartwatch, setSmartwatch,
             earbuds, setEarbuds,
+            images, setImages,
         }}>
             {children}
         </ItemContext.Provider>
