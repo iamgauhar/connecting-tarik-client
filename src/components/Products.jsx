@@ -37,7 +37,7 @@ const Products = () => {
 
     <>
       <div className="mt-10 mb-14">
-        <div className="mb-8">
+        <div className="mb-4">
           <p className="pt-2 text-3xl text-gray-800 font-semibold">Smartphones</p>
         </div>
         <div className="flex flex-wrap gap-4 items-center justify-center md:justify-between">
@@ -54,7 +54,7 @@ const Products = () => {
         </div>
       </div>
       <div className="mt-10 mb-14">
-        <div className="mb-8">
+        <div className="mb-4">
           <p className="pt-2 text-3xl text-gray-800 font-semibold">Smartwatch</p>
         </div>
         <div className="flex flex-wrap gap-4 items-center justify-center md:justify-between">
@@ -71,7 +71,7 @@ const Products = () => {
         </div>
       </div>
       <div className="mt-10 mb-14">
-        <div className="mb-8">
+        <div className="mb-4">
           <p className="pt-2 text-3xl text-gray-800 font-semibold">Earbuds</p>
         </div>
         <div className="flex flex-wrap gap-4 items-center justify-center md:justify-between">

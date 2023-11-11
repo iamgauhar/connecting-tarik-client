@@ -1,6 +1,7 @@
 
 import SlideCrousel from '../components/Crousel'
-import smartWatch from '../assets/images/MinimalistGW.png'
+import smartWatch from '../assets/images/Minimalist Description.png'
+import earbuds from '../assets/images/Minimalist Earbuds.png'
 
 const HeroSection = () => {
   return (
@@ -12,7 +13,7 @@ const HeroSection = () => {
             <img src={smartWatch} alt="" className=' object-cover w-full h-full hover:scale-110 transition-all duration-500' />
           </div>
           <div className='bg-purple-400 col-span-2 md:col-span-1 rounded-md overflow-hidden object-cover cursor-pointer'>
-            <img src={smartWatch} alt="" className='object-cover w-full h-full hover:scale-110 transition-all duration-500' />
+            <img src={earbuds} alt="" className='object-cover w-full h-full hover:scale-110 transition-all duration-500' />
 
           </div>
         </div>
