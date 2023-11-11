@@ -2,10 +2,11 @@
 import { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import { youtubeLink } from "../../config/apiUrl";
+import { useYourContext } from "../../context/itemContext";
 
 const RelatedVideos = () => {
 
-  const [urls, setUrls] = useState([])
+  const { urls, setUrls } = useYourContext()
   const allLinks = async () => {
     const linkList = await fetch(youtubeLink, {
       method: 'GET',
@@ -14,7 +15,7 @@ const RelatedVideos = () => {
     // console.log(await allProductList.json());
     const response = await linkList.json();
     setUrls(response.response);
-    console.log(response);
+    // console.log(response);
   };
 
   useEffect(() => {

@@ -2,10 +2,12 @@
 import { useEffect, useState } from "react";
 import CateCard from "./CateCard";
 import { getCategories } from "../../config/apiUrl";
+import { useYourContext } from "../../context/itemContext";
+
 
 const FeaturedCate = () => {
 
-  const [categories, setCategories] = useState([])
+  const { categories, setCategories } = useYourContext()
   const allCategories = async () => {
     const allCategoryList = await fetch(getCategories, {
       method: 'GET',
