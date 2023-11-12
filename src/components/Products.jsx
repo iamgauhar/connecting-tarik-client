@@ -10,6 +10,8 @@ const Products = () => {
   const { smartphone, setSmartphone } = useYourContext()
   const { earbuds, setEarbuds } = useYourContext()
   const { smartwatch, setSmartwatch } = useYourContext()
+  const { loading, setLoading } = useYourContext()
+
 
   const allProducts = async () => {
 
@@ -21,7 +23,9 @@ const Products = () => {
     setSmartphone(displayProductsByCategory("Smartphone", response.products))
     setSmartwatch(displayProductsByCategory("Smartwatch", response.products))
     setEarbuds(displayProductsByCategory("Earbuds", response.products))
-
+    setTimeout(() => {
+      setLoading(false)
+    }, 1000);
   };
 
 

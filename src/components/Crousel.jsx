@@ -4,17 +4,21 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 import { getOffer } from '../../config/apiUrl';
 import { useEffect } from 'react';
 import { useYourContext } from '../../context/itemContext';
+import Loader from './Loader';
 const SlideCrousel = () => {
   const { offer, setOffer } = useYourContext()
+  const { loading, setLoading } = useYourContext()
   const alloffer = async () => {
-
+    setLoading(true)
     const offerData = await fetch(getOffer, {
       method: 'GET',
     });
     const response = await offerData.json();
-    console.log(response)
 
     setOffer(response.crousels)
+    setTimeout(() => {
+      setLoading(false)
+    }, 1000);
   };
 
 
@@ -46,7 +50,7 @@ const SlideCrousel = () => {
           {
             offer.map((item, i) => {
               return (
-                <Slide index={i}>
+                <Slide index={i} key={i}>
                   <a href={item.link} target='_blank'>
                     <Image className='object-cover' src={item.image} />
                   </a>

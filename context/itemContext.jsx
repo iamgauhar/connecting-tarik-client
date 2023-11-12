@@ -4,6 +4,7 @@ const ItemContext = createContext();
 
 const ItemContextProvider = ({ children }) => {
     const [categories, setCategories] = useState([]);
+    const [categoryName, setCategoryName] = useState("");
     const [urls, setUrls] = useState([])
     const [smartphone, setSmartphone] = useState([]);
     const [products, setProducts] = useState([]);
@@ -11,6 +12,7 @@ const ItemContextProvider = ({ children }) => {
     const [earbuds, setEarbuds] = useState([]);
     const [images, setImages] = useState([]);
     const [offer, setOffer] = useState([]);
+    const [loading, setLoading] = useState(false);
     return (
         <ItemContext.Provider value={{
             categories, setCategories,
@@ -20,7 +22,9 @@ const ItemContextProvider = ({ children }) => {
             smartwatch, setSmartwatch,
             earbuds, setEarbuds,
             images, setImages,
-            offer, setOffer
+            offer, setOffer,
+            categoryName, setCategoryName,
+            loading, setLoading,
         }}>
             {children}
         </ItemContext.Provider>

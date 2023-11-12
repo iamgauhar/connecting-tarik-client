@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Gallery from './pages/Gallery';
 import Header from './components/Header';
 import About from './pages/About';
+import ProductCategory from './pages/ProductCategory';
 
 const App = () => {
     return (
@@ -13,6 +14,7 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/category/:id" element={<ProductCategory />} />
             </Routes>
         </>
     );
