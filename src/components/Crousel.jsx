@@ -1,8 +1,32 @@
 
 import { ButtonBack, ButtonNext, CarouselProvider, Dot, DotGroup, Image, Slide, Slider } from 'pure-react-carousel'
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import { getOffer } from '../../config/apiUrl';
+import { useEffect } from 'react';
+import { useYourContext } from '../../context/itemContext';
 const SlideCrousel = () => {
+  const { offer, setOffer } = useYourContext()
+  const alloffer = async () => {
+
+    const offerData = await fetch(getOffer, {
+      method: 'GET',
+    });
+    const response = await offerData.json();
+    console.log(response)
+
+    setOffer(response.crousels)
+  };
+
+
+  useEffect(() => {
+    try {
+      alloffer();
+    } catch (err) {
+      console.log(err);
+    }
+  }, []);
   return (
+
     <div className='relative'>
       <CarouselProvider
 
@@ -19,19 +43,17 @@ const SlideCrousel = () => {
       >
 
         <Slider className='rounded-md'>
-          <Slide index={0}>
-            <Image className='object-cover' src='https://images.unsplash.com/photo-1651132988416-6887d17c90e9?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' />
-            <h1 className='absolute top-0'>Okay so this is the emd</h1>
-          </Slide>
-          <Slide index={1}>
-            <Image className='object-cover' src='https://images.unsplash.com/photo-1651132988416-6887d17c90e9?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' />
-          </Slide>
-          <Slide index={2}>
-            <Image className='object-cover' src='https://images.unsplash.com/photo-1651132988416-6887d17c90e9?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' />
-          </Slide>
-          <Slide index={3}>
-            <Image className='object-cover' src='https://images.unsplash.com/photo-1651132988416-6887d17c90e9?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' />
-          </Slide>
+          {
+            offer.map((item, i) => {
+              return (
+                <Slide index={i}>
+                  <a href={item.link} target='_blank'>
+                    <Image className='object-cover' src={item.image} />
+                  </a>
+                </Slide>
+              )
+            })
+          }
 
         </Slider>
         <ButtonBack className='bg-white opacity-70 w-8 h-8 absolute text-white rounded-full flex items-center justify-center top-1/2 -left-4 -translate-y-1/2 border border-cyan-300'><div className=''><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"  ><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path></svg></div></ButtonBack>
