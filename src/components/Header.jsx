@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { FiSearch } from 'react-icons/fi';
 import { AiOutlineClose } from 'react-icons/ai';
-
+import logo from '../assets/images/MCT (1).png'
 const Header = () => {
     const [toggle, setToggle] = useState(false);
     return (
@@ -16,15 +16,17 @@ const Header = () => {
                     >
                         <RxHamburgerMenu size={21} />
                     </p>
-                    <p className="cursor-pointer text-2xl">
-                        <NavLink to="/">eCom</NavLink>
-                    </p>
+                    <div className="cursor-pointer text-2xl h-12 pb-2 md:p-0">
+                        <NavLink to="/" className="">
+                            <img className='h-full object-cover' src={logo} alt="logo" />
+                        </NavLink>
+                    </div>
                 </div>
                 <div className={`flex md:items-center gap-6 relative`}>
                     <div
                         className={`${toggle
-                                ? 'w-[250px] md:w-full'
-                                : 'left-[-250px] md:left-0'
+                            ? 'w-[250px] md:w-full'
+                            : 'left-[-250px] md:left-0'
                             } flex flex-col md:flex-row md:gap-6 pl-10 md:pl-0 md:items-center pt-[100px] md:pt-0 fixed left-0 top-0 h-[100vh] md:h-auto md:relative z-20 bg-blue-500 text-white transition-all`}
                     >
                         <div
@@ -34,10 +36,10 @@ const Header = () => {
                             <AiOutlineClose />
                         </div>
 
-                        <NavLink to="/">Home</NavLink>
-                        <NavLink to="/gallery">Gallery</NavLink>
-                        <NavLink to="/about">About</NavLink>
-                        <NavLink to="/contact">Contact</NavLink>
+                        <NavLink to="/" onClick={() => setToggle(!toggle)}>Home</NavLink>
+                        <NavLink to="/gallery" onClick={() => setToggle(!toggle)}>Gallery</NavLink>
+                        <NavLink to="/about" onClick={() => setToggle(!toggle)}>About</NavLink>
+                        <NavLink to="/contact" onClick={() => setToggle(!toggle)}>Contact</NavLink>
                     </div>
                     <div className="cursor-pointer text-[25px] transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
                         <FiSearch size={18} />

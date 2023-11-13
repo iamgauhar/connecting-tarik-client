@@ -32,7 +32,7 @@ const FeaturedCate = () => {
       <div className="flex gap-4 flex-wrap justify-center md:justify-between">
         {/* <CateCard /> */}
         {
-          categories.map((item) => {
+          categories?.map((item) => {
             return (
               <CateCard item={item} key={item._id} />
             )

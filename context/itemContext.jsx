@@ -13,6 +13,8 @@ const ItemContextProvider = ({ children }) => {
     const [images, setImages] = useState([]);
     const [offer, setOffer] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [swId, setSwId] = useState("");
+    const [ebId, setEbId] = useState("");
     return (
         <ItemContext.Provider value={{
             categories, setCategories,
@@ -25,6 +27,8 @@ const ItemContextProvider = ({ children }) => {
             offer, setOffer,
             categoryName, setCategoryName,
             loading, setLoading,
+            swId, setSwId,
+            ebId, setEbId
         }}>
             {children}
         </ItemContext.Provider>
