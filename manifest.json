@@ -1,7 +1,7 @@
 {
     "name":"Maxx Connecting Tarik",
     "shrot_name":"MCT",
-    "start_url":"./?home=true",
+    "start_url":"https://connectingtarik.netlify.app/",
     "icons":[
         {
             "src": "icons_folder/manifest-icon-192.maskable.png",
