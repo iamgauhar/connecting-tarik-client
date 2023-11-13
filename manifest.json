@@ -3,6 +3,13 @@
     "shrot_name":"MCT",
     "start_url":"https://connectingtarik.netlify.app/",
     "icons":[
+      
+      {
+        "src": "icons_folder/apple-icon-180.png",
+        "sizes": "180x180",
+        "type": "image/png",
+        "purpose": "any"
+      },
       {
         "src": "icons_folder/manifest-icon-192.maskable.png",
         "sizes": "192x192",
